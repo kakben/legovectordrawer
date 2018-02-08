@@ -14,6 +14,7 @@ pi = pigpio.pi()
 if not pi.connected:
    exit()
 
+pi.set_PWM_frequency(18, 50)
 pi.set_servo_pulsewidth(18, 0)
 print "Sending servo pulses to GPIO 18, control C to stop."
 
